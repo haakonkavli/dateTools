@@ -1,0 +1,10 @@
+Package: dateTools
+Type: Package
+Title: Manipulate date and time series objects
+Version: 1.1
+Date: 2016-01-06
+Author: Haakon Kavli
+Maintainer: Haakon <Haakon.Kavli@Prescient.co.za>
+Description: Functions to manipulate time series and date objects
+License: NA
+Depends: zoo

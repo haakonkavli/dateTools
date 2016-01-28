@@ -1,0 +1,17 @@
+{
+    "contents" : "\\name{dateTools-package}\n\\alias{dateTools-package}\n\\alias{dateTools}\n\\docType{package}\n\\title{Manipulate date and time series objects\n}\n\\description{\n\\packageDescription{dateTools}\n}\n\\details{\n\\packageDESCRIPTION{dateTools}\n\\packageIndices{dateTools}\n}\n\\author{\n\\packageAuthor{dateTools}\n\nMaintainer: \\packageMaintainer{dateTools}\n}\n\\references{\n}\n\\keyword{ package }\n\\examples{\n#Load dateTools package\nlibrary(dateTools)\n\n# Create a date vector of monthly observations on first day of month:\nfirstOfMonth <- seq(as.Date('2000-01-01'),as.Date('2005-01-01'),by='month')\n# Transform to end of month:\nendOfMonth <- eomdate(firstOfMonth)\n\n# Create a daily date vector with missing days:\ndailyDates <- seq(as.Date('2000-01-01'),as.Date('2001-01-01'),by='day')\n# Remove every fifth day\ndailyDatesWithMissing <- dailyDates[-(seq(2,length(dailyDates),by = 5))]\ndailyZooWithMissing <- zoo(rnorm(length(dailyDatesWithMissing)),order.by = dailyDatesWithMissing)\ndailyZooFilled <- fillts(dailyZooWithMissing)\nprint(paste('Filled in ',length(dailyZooFilled) - length(dailyZooWithMissing),' missing days..',sep = ''))\n\n# Aggregate dailyZooFilled to monthly frequency:\nmonthlyZoo <- tomonthly(dailyZooFilled)\n}\n",
+    "created" : 1453969464523.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2740475070",
+    "id" : "E788B350",
+    "lastKnownWriteTime" : 1453969429,
+    "path" : "H:/Haakon/Production/Utility/Dates_Time/dateTools/man/dateTools-package.Rd",
+    "project_path" : "man/dateTools-package.Rd",
+    "properties" : {
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "type" : "r_doc"
+}
