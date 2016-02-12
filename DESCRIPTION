@@ -7,4 +7,4 @@ Author: Haakon Kavli
 Maintainer: Haakon <Haakon.Kavli@Prescient.co.za>
 Description: Functions to manipulate time series and date objects
 License: NA
-Depends: zoo
+Depends: zoo, data.table
